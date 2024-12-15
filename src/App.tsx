@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "@/pages/home";
-import About from "@/pages/about";
+import Skill from "@/pages/skill";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skill />} />
         </Routes>
       </BrowserRouter>
     </>

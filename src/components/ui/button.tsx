@@ -1,18 +1,22 @@
 import { ReactNode } from "react";
+import { Link } from "react-router";
 import styled from "styled-components";
 
 interface Props {
   children: ReactNode;
+  to: string;
 }
 
-const Button = ({ children }: Props) => {
+const Button = ({ children, to }: Props) => {
   return (
     <StyledWrapper>
-      <button className="button">
-        <div className="wrap">
-          <p>{children}</p>
-        </div>
-      </button>
+      <Link to={to}>
+        <button className="button">
+          <div className="wrap">
+            <p>{children}</p>
+          </div>
+        </button>
+      </Link>
     </StyledWrapper>
   );
 };
@@ -34,10 +38,10 @@ const StyledWrapper = styled.div`
       0 1rem 1rem -0.6rem rgba(0, 0, 0, 0.8);
   }
   .button .wrap {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.7);
-    padding: 32px 45px;
+    color: rgba(255, 255, 255, 1);
+    padding: 25px 40px;
     border-radius: inherit;
     position: relative;
     overflow: hidden;
