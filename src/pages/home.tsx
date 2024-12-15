@@ -1,6 +1,5 @@
 import PublicLayout from "@/components/layout/public/layout";
 import { Box, Flex, Heading, Stack, Text, Highlight } from "@chakra-ui/react";
-import avatar from "@/assets/avatar.svg";
 import Button from "@/components/ui/button";
 
 export default function Home() {
@@ -65,9 +64,7 @@ export default function Home() {
               </Text>
             </Box>
           </Stack>
-          <Stack w={"40%"} display={{ base: "none", md: "flex" }}>
-            <img src={avatar} hidden />
-          </Stack>
+          <Stack w={"40%"} display={{ base: "none", md: "flex" }}></Stack>
         </Flex>
       </Flex>
     </PublicLayout>
